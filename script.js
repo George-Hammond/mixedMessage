@@ -12,3 +12,24 @@ const collectiveAdvice = {
 function randomSel(number){
     return Math.floor(Math.random()*number)
 };
+
+//looping through the messages randomly
+
+ for(let item in collectiveAdvice) {
+    let optionIdx = randomSel(collectiveAdvice[item].length)
+
+   
+    switch(item) {
+      case 'diabetesTip':
+        messageArr.push(`You need to ${collectiveAdvice[item][optionIdx]}.`)
+        break
+      case 'healthTips':
+        messageArr.push(`In order to stay healthy, you need to ${collectiveAdvice[item][optionIdx]}.`)
+        break
+      case 'doctorgivingTip':
+        messageArr.push(`This is a special message from Doctor ${collectiveAdvice[item][optionIdx]}.`)
+        break
+      default:
+        messageArr.push('There is not enough info.')
+    }
+  }
