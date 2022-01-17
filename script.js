@@ -33,3 +33,13 @@ function randomSel(number){
         messageArr.push('There is not enough info.')
     }
   }
+
+
+// a function to join ramdomly selected messafges to be displayed.
+  function healthAdvice(wisdom) {
+    const addedMessages = messageArr.join('\n')
+    console.log(addedMessages)
+  }
+
+//call function to log messages to the console.
+healthAdvice(messageArr); 
